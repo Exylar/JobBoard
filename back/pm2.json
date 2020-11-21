@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "back",
+      "script": "npx",
+      "interpreter": "none",
+      "args": "node /usr/src/app/app.js --prod"
+    }
+  ]
+}

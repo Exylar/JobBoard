@@ -1,0 +1,12 @@
+FROM keymetrics/pm2:latest-alpine
+
+WORKDIR /usr/src/app
+RUN echo "environnement: production"
+
+COPY package*.json /usr/src/app/
+RUN npm install
+RUN npm install -g sails
+COPY . /usr/src/app/
+
+EXPOSE 1337
+CMD [ "pm2-runtime", "start", "pm2.json" ]
